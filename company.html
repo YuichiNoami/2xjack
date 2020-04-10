@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-149785128-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'UA-149785128-1');
+    </script>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>企業情報 | ツーテンジャック | 2XJac</title>
+    <link rel="shortcut icon" href="img/favicon.ico">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.8.0/css/bulma.min.css">
+    <link rel="stylesheet" type="text/css" href="base.css">
+    <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
+</head>
+
+<body>
+    <header>
+        <nav class="navbar" role="navigation" aria-label="main navigation">
+            <div class="navbar-brand">
+                <a class="navbar-item" href="/">
+                    <img src="img/2xjack_logo.png" alt="2XJack">
+                </a>
+                <a role="button" class="navbar-burger" data-target="navMenu" aria-label="menu" aria-expanded="false">
+                    <span aria-hidden="true"></span>
+                    <span aria-hidden="true"></span>
+                    <span aria-hidden="true"></span>
+                </a>
+            </div>
+            <div class="navbar-menu" id="navMenu">
+                <a class="navbar-item is-active" href="company.html">企業情報<br>COMPANY</a>
+                <a class="navbar-item" href="https://forms.gle/LK4cVZgj7WwG2qoP6">お問い合わせ<br>CONTACT</a>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <section class="hero is-success">
+            <div class="hero-body">
+                <div class="container">
+                    <h3 class="title is-4">
+                        代表 プロフィール
+                    </h3>
+                    <h4 class="subtitle is-5">
+                        こんな私だからこそ、出来ることがあります。
+                    </h4>
+                    <p>
+                        高校二年生の頃からロックバンドのプロデューサーに就き、CDアルバムの制作指揮やイベントの企画運営、Webサイトの制作運営などを行ってきました。その傍ら自身もバンドを組み活動し、さらには高校生専用フリーペーパー創刊に向けて編集者なども務めておりました。そんな自分らしい活動の追求が勢い余り、高校を3年生の3月に中退。21歳の時にインディーズミュージシャン事務所を設立後、より頼りにされる存在になれるフィールドを模索し、現在は広島県に在住しながらソフトウェアエンジニアとして活動中です。
+                    </p>
+                </div>
+            </div>
+        </section>
+        <section class="section">
+            <div class="container">
+                <h3 class="title is-4">
+                    企業理念
+                </h3>
+                <div class="content">
+                    <ol type="1">
+                        <li>利益追求</li>
+                        <li>時間管理</li>
+                        <li>社会貢献</li>
+                    </ol>
+                </div>
+            </div>
+        </section>
+        <section class="section">
+            <div class="container">
+                <h3 class="title is-4">
+                    事業所概要
+                </h3>
+                <div class="content">
+                    <table class="table">
+                        <tr>
+                            <th>屋号</th>
+                            <td>ツーテンジャック</td>
+                        </tr>
+                        <tr>
+                            <th>代表者</th>
+                            <td>代表 野網</td>
+                        </tr>
+                        <tr>
+                            <th>設立</th>
+                            <td>2019年10月7日</td>
+                        </tr>
+                        <tr>
+                            <th>所在地</th>
+                            <td>広島県東広島市</td>
+
+                        </tr>
+                        <tr>
+                            <th>連絡先</th>
+                            <td>050-3708-4910</td>
+                        </tr>
+                        <tr>
+                            <th>事業内容</th>
+                            <td>ITソリューション事業</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </section>
+        <section class="section">
+            <div class="container">
+                <h3 class="title is-4">
+                    沿革
+                </h3>
+                <div class="content">
+                    <table class="table">
+                        <tr>
+                            <th>2019年10月</th>
+                            <td>広島県東広島市にて創業</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </section>
+    </main>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+
+            // Get all "navbar-burger" elements
+            const $navbarBurgers = Array.prototype.slice.call(document.querySelectorAll('.navbar-burger'), 0);
+
+            // Check if there are any navbar burgers
+            if ($navbarBurgers.length > 0) {
+
+                // Add a click event on each of them
+                $navbarBurgers.forEach(el => {
+                    el.addEventListener('click', () => {
+
+                        // Get the target from the "data-target" attribute
+                        const target = el.dataset.target;
+                        const $target = document.getElementById(target);
+
+                        // Toggle the "is-active" class on both the "navbar-burger" and the "navbar-menu"
+                        el.classList.toggle('is-active');
+                        $target.classList.toggle('is-active');
+
+                    });
+                });
+            }
+
+        });
+    </script>
+</body>
+
+</html>

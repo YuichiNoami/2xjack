@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-149785128-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'UA-149785128-1');
+    </script>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>ツーテンジャック | 2XJack</title>
+    <link rel="shortcut icon" href="img/favicon.ico">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.8.0/css/bulma.min.css">
+    <link rel="stylesheet" type="text/css" href="base.css">
+    <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
+</head>
+
+<body>
+    <header>
+        <nav class="navbar" role="navigation" aria-label="main navigation">
+            <div class="navbar-brand">
+                <a class="navbar-item" href="/">
+                    <img src="img/2xjack_logo.png" alt="2XJack">
+                </a>
+                <a role="button" class="navbar-burger" data-target="navMenu" aria-label="menu" aria-expanded="false">
+                    <span aria-hidden="true"></span>
+                    <span aria-hidden="true"></span>
+                    <span aria-hidden="true"></span>
+                </a>
+            </div>
+            <div class="navbar-menu" id="navMenu">
+                <a class="navbar-item" href="company.html">企業情報<br>COMPANY</a>
+                <a class="navbar-item" href="https://forms.gle/LK4cVZgj7WwG2qoP6">お問い合わせ<br>CONTACT</a>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <section class="hero is-info">
+            <div class="hero-body">
+                <div class="container">
+                    <h2 class="title is-3">常に最適化を目指すことがモットーです。</h2>
+                    <p class="subtitle">
+                        プログラミング言語PHPを使用するシステム開発・Webサイト制作なら<br>
+                        広島を拠点とする2XJack(ツーテンジャック)へご相談ください。
+                    </p>
+                </div>
+            </div>
+        </section>
+        <section class="section">
+            <div class="container">
+                <h3 class="title is-4">
+                    代表あいさつ
+                </h3>
+                <h4 class="subtitle is-5">
+                    ITは、社会の基盤です。
+                </h4>
+                <p>
+                    私が初めてコンピュータに触れたころ、それはまだ道具としての側面が大きいものでした。しかし現代では、単なる仕事道具として以上の大きな規模での活用がされており、私たちにとってパーソナルコンピュータやスマートフォン・タブレットは論じるまでもなく欠かせないものです。そんな時代の中で、私にできることは限られているかもしれませんが、ITの力の活用によって社会により良い影響を与えて行き、いつかは「誰も夢を諦めなくて良い社会を作る」ことが私の夢です。
+                </p>
+            </div>
+        </section>
+        <section class="section">
+            <div class="container">
+                <h3 class="title is-4">
+                    事業内容
+                </h3>
+                <div class="content">
+                    <dl>
+                        <dt>ITソリューション</dt>
+                        <dd>LAMP(Linux, Apache, MySQL, PHP)環境によるWebシステム開発やソフトウェア開発等のサービスを提供いたします。詳細については、お問い合わせください。
+                        </dd>
+                    </dl>
+                </div>
+            </div>
+        </section>
+    </main>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+
+            // Get all "navbar-burger" elements
+            const $navbarBurgers = Array.prototype.slice.call(document.querySelectorAll('.navbar-burger'), 0);
+
+            // Check if there are any navbar burgers
+            if ($navbarBurgers.length > 0) {
+
+                // Add a click event on each of them
+                $navbarBurgers.forEach(el => {
+                    el.addEventListener('click', () => {
+
+                        // Get the target from the "data-target" attribute
+                        const target = el.dataset.target;
+                        const $target = document.getElementById(target);
+
+                        // Toggle the "is-active" class on both the "navbar-burger" and the "navbar-menu"
+                        el.classList.toggle('is-active');
+                        $target.classList.toggle('is-active');
+
+                    });
+                });
+            }
+
+        });
+    </script>
+</body>
+
+</html>
