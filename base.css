@@ -7,5 +7,17 @@ h1.title a {
 }
 
 body {
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-family: 'Noto Serif JP', serif;
+}
+
+.bg-img-main {
+    background-image: url("img/main.jpg");
+    background-position: center;
+    background-size: cover;
+}
+
+.bg-img-profile {
+    background-image: url("img/company.jpg");
+    background-position: center;
+    background-size: cover;
 }
