@@ -6,7 +6,10 @@
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-149785128-1"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
-        function gtag() { dataLayer.push(arguments); }
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
         gtag('js', new Date());
 
         gtag('config', 'UA-149785128-1');
@@ -26,56 +29,93 @@
     <meta name="twitter:creator" content="@yuichin925" />
     <link rel="shortcut icon" href="img/favicon.ico">
     <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.8.0/css/bulma.min.css">
-    <link rel="stylesheet" type="text/css" href="base.css?20200510">
+    <link rel="stylesheet" type="text/css" href="base.css?202008291145">
     <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
 </head>
 
 <body>
     <header>
         <nav class="navbar" role="navigation" aria-label="main navigation">
-            <div class="navbar-brand">
-                <a class="navbar-item" href="/">
-                    <img src="img/2xjack_logo.png" alt="2XJack">
-                </a>
-                <a role="button" class="navbar-burger" data-target="navMenu" aria-label="menu" aria-expanded="false">
-                    <span aria-hidden="true"></span>
-                    <span aria-hidden="true"></span>
-                    <span aria-hidden="true"></span>
-                </a>
+            <div class="toggle-modal">
+                <img class="modal-open" src="img/mark.png" onclick="openModal();">
+                <img class="modal-close" src="img/close.png" onclick="closeModal();" style="display: none;">
             </div>
             <div class="navbar-menu" id="navMenu">
-                <a class="navbar-item" href="company.html">企業情報<br>COMPANY</a>
-                <a class="navbar-item" href="https://forms.gle/LK4cVZgj7WwG2qoP6">お問い合わせ<br>CONTACT</a>
-                <a class="navbar-item" href="privacy.html">個人情報取扱い<br>PRIVACY</a>
+                <a class="navbar-menu-item" href="#message">代表挨拶</a>
+                <a class="navbar-menu-item" href="#policy">企業理念</a>
+                <a class="navbar-menu-item" href="#working">事業内容</a>
+                <a class="navbar-menu-item" href="#office">事業所概要</a>
+                <a class="navbar-menu-item" href="#history">沿革</a>
+                <a class="navbar-menu-item" href="https://forms.gle/LK4cVZgj7WwG2qoP6">お問い合わせ</a>
+            </div>
+            <div class="navbar-brand">
+                <p class="navbar-item company-logo"></p>
+                <p class="navbar-item company-name-alphanum">2XJack</p>
+                <p class="navbar-item company-name-kana">ツーテンジャック</p>
             </div>
         </nav>
     </header>
     <main>
-        <section class="hero is-info bg-img-main">
+        <section class="hero is-info">
             <div class="hero-body">
                 <div class="container">
-                    <h2 class="title is-3">常に最適化を目指すことがモットーです。</h2>
-                    <p class="subtitle">
-                        プログラミング言語PHPを使用するシステム開発・Webサイト制作なら<br>
-                        広島を拠点とする2XJack(ツーテンジャック)へご相談ください。
+                    <h2 class="motto">常に最適化を目指すことがモットーです。</h2>
+                    <p class="sub-motto">
+                        プログラミング言語PHPを使用するシステム開発、<br>Webサイト制作なら<br> 広島を拠点とする2XJack(ツーテンジャック)へ<br>ご相談ください。
                     </p>
+                </div>
+                <div class="balls">
+                    <img class="balls-4" src="img/balls_4.png">
+                    <img class="balls-3" src="img/balls_3.png">
                 </div>
             </div>
         </section>
-        <section class="section">
+        <section class="hero is-info" id="message">
+            <div class="hero-body">
+                <div class="container">
+                    <h3 class="title is-4">
+                        代表挨拶
+                    </h3>
+                    <div class="content ball-back">
+                        <p>私が初めてコンピュータに触れたころ、それはまだ道具としての側面が大きいものでした。しかし現代では、単なる仕事道具として以上の大きな規模での活用がされており、私たちにとってパーソナルコンピュータやスマートフォン・タブレットは論じるまでもなく欠かせないものです。そんな時代の中で、私にできることは限られているかもしれませんが、ITの力の活用によって社会により良い影響を与えて行き、いつかは「誰も夢を諦めなくて良い社会を作る」ことが私の夢です。</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="section" id="policy">
+            <div class="container">
+                <h3 class="title is-4">
+                    企業理念
+                </h3>
+                <div class="content ball-back">
+                    <ol type="1">
+                        <li>利益追求<br>- 利益の追求はあまねくすべての企業にとっての最優先事項です。利益が出すことができてこそ、企業は社会の中で意義を持ちます。</li>
+                        <li>時間管理<br>- 時間は誰にとっても1日に24時間しかない、<br>唯一平等な資源です。その平等かつ有限である時間を無駄にしない姿勢こそが、最適化を実現します。</li>
+                        <li>社会貢献<br> - 利益を追求し、時間を管理し生み出した価値を社会に還元せずただ私腹を肥してばかりでは成功とは呼べません。当所では社会全体で豊かになることを重視し、価値を社会に還元します。</li>
+                    </ol>
+                </div>
+            </div>
+        </section>
+        <section class="middle-images">
+            <p><img class="mark-s" src="img/mark.png" width="33"></p>
+            <p><img class="mark-m" src="img/mark.png" width="45"></p>
+            <p><img class="mark-l" src="img/mark.png" width="75"></p>
+            <p><img src="img/computer.png" width="278"></p>
+        </section>
+        <section class="section" id="working">
             <div class="container">
                 <h3 class="title is-4">
                     事業内容
                 </h3>
-                <div class="content">
+                <div class="content ball-back blue-back">
                     <dl>
                         <dt>ITソリューション</dt>
                         <dd>LAMP(Linux, Apache, MySQL, PHP)環境によるWebシステム開発やソフトウェア開発等のサービスを提供いたします。詳細については、お問い合わせください。
                         </dd>
                     </dl>
                 </div>
-                <div class="content">
+                <div class="content ball-back green-back mt-30">
                     <dl>
                         <dt>マルチメディア</dt>
                         <dd>ビデオゲームやポピュラー音楽などを主題とした動画やブログなどのメディア媒体の制作を行い、供給しております。詳細については、お問い合わせください。
@@ -84,33 +124,77 @@
                 </div>
             </div>
         </section>
+        <section class="section" id="office">
+            <div class="container">
+                <h3 class="title is-4">
+                    <img class="phone-img" src="img/phone.png">
+                    <p>事業所概要</p>
+                </h3>
+                <div class="content table">
+                    <div class="table-head">
+                        <p>屋号</p>
+                        <p>代表者</p>
+                        <p>設立</p>
+                        <p class="line-3em">所在地</p>
+                        <p class="mt-30">連絡先</p>
+                        <p>事業内容</p>
+                    </div>
+                    <div class="table-main">
+                        <p class="border-bottom-blue">ツーテンジャック</p>
+                        <img class="img-human" src="img/human.png">
+                        <p class="border-bottom-black pl-60">野網 優一</p>
+                        <p class="border-bottom-blue">2019年10月7日</p>
+                        <p class="border-bottom-blue">〒732-0828<br>広島県広島市南区京橋町１−７アスティ広島京橋ビルディング 1F/2F</p>
+                        <p class="border-bottom-blue">050-3708-4910</p>
+                        <ul>
+                            <li>ITソリューション事業</li>
+                            <li>マルチメディア事業</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="section clearfix" id="history">
+            <div class="container">
+                <h3 class="title is-4">
+                    沿革
+                </h3>
+                <div class="content table">
+                    <div class="table-head">
+                        <p>2020年8月</p>
+                        <p>2019年10月</p>
+                    </div>
+                    <div class="table-main">
+                        <p class="border-bottom-blue">広島市南区に事務所移転</p>
+                        <p class="border-bottom-blue">広島県東広島市にて創業</p>
+                    </div>
+                </div>
+            </div>
+        </section>
     </main>
     <script>
-        document.addEventListener('DOMContentLoaded', () => {
-
-            // Get all "navbar-burger" elements
-            const $navbarBurgers = Array.prototype.slice.call(document.querySelectorAll('.navbar-burger'), 0);
-
-            // Check if there are any navbar burgers
-            if ($navbarBurgers.length > 0) {
-
-                // Add a click event on each of them
-                $navbarBurgers.forEach(el => {
-                    el.addEventListener('click', () => {
-
-                        // Get the target from the "data-target" attribute
-                        const target = el.dataset.target;
-                        const $target = document.getElementById(target);
-
-                        // Toggle the "is-active" class on both the "navbar-burger" and the "navbar-menu"
-                        el.classList.toggle('is-active');
-                        $target.classList.toggle('is-active');
-
-                    });
-                });
-            }
-
+        $(function() {
+            $(window).resize(function() {
+                var width = $(window).width();
+                if (width > 768) {
+                    $('.navbar-menu').show();
+                } else {
+                    closeModal();
+                }
+            });
         });
+
+        function openModal() {
+            $('.navbar-menu').show();
+            $('.modal-close').show();
+            $('.modal-open').hide();
+        }
+
+        function closeModal() {
+            $('.navbar-menu').hide();
+            $('.modal-close').hide();
+            $('.modal-open').show();
+        }
     </script>
 </body>
 
