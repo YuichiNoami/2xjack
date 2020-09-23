@@ -142,9 +142,10 @@ section {
 }
 
 .phone-img {
+    display: block;
     position: relative;
-    right: 90px;
-    top: 60px;
+    left: 160px;
+    top: 40px;
 }
 
 .mt-30 {
