@@ -1,4 +1,6 @@
 # 2XJack
+![GitHub](https://img.shields.io/github/license/YuichiNoami/2xjack)
+![Twitter Follow](https://img.shields.io/twitter/follow/2xjack_tw?style=social)
 
 ## Welcome!
 
