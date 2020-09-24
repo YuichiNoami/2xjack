@@ -88,11 +88,13 @@ section {
 }
 
 .balls-4 {
+    display: inline-flex;
     position: relative;
     top: 30px;
 }
 
 .balls-3 {
+    display: inline-flex;
     position: relative;
     bottom: 30px;
     right: 10px;
@@ -142,9 +144,9 @@ section {
 }
 
 .phone-img {
-    display: block;
+    display: inline-block;
     position: relative;
-    left: 160px;
+    right: 120px;
     top: 40px;
 }
 
@@ -206,12 +208,16 @@ section {
         display: block;
         z-index: 100;
         position: fixed;
+        top: 0;
         right: 0;
     }
     .modal-close {
         position: relative;
         top: 30px;
         right: 30px;
+    }
+    .navbar-brand {
+        margin-top: -120px;
     }
     .navbar-menu {
         z-index: 50;
@@ -231,5 +237,26 @@ section {
     }
     .line-3em {
         min-height: 5em;
+    }
+}
+
+@media screen and (max-width: 320px) {
+    .toggle-modal {
+        top: -10px;
+        right: -20px;
+    }
+    #message {
+        position: relative;
+        top: 50px;
+    }
+    .balls-4 {
+        display: inline-flex;
+        float: left;
+    }
+    .balls-3 {
+        display: inline-flex;
+        float: right;
+        top: -2px;
+        right: 2px;
     }
 }
