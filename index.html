@@ -42,12 +42,12 @@
                 <img class="modal-close" src="img/close.png" onclick="closeModal();" style="display: none;">
             </div>
             <div class="navbar-menu">
-                <a class="navbar-menu-item" href="#message">代表挨拶</a>
-                <a class="navbar-menu-item" href="#policy">企業理念</a>
-                <a class="navbar-menu-item" href="#working">事業内容</a>
-                <a class="navbar-menu-item" href="#office">事業所概要</a>
-                <a class="navbar-menu-item" href="#history">沿革</a>
-                <a class="navbar-menu-item" href="https://forms.gle/LK4cVZgj7WwG2qoP6">お問い合わせ</a>
+                <a class="navbar-menu-item" href="#message" onclick="closeModal();">代表挨拶</a>
+                <a class="navbar-menu-item" href="#policy" onclick="closeModal();">企業理念</a>
+                <a class="navbar-menu-item" href="#working" onclick="closeModal();">事業内容</a>
+                <a class="navbar-menu-item" href="#office" onclick="closeModal();">事業所概要</a>
+                <a class="navbar-menu-item" href="#history" onclick="closeModal();">沿革</a>
+                <a class="navbar-menu-item" href="https://forms.gle/LK4cVZgj7WwG2qoP6" onclick="closeModal();" target="new">お問い合わせ</a>
             </div>
             <div class="navbar-brand">
                 <p class="navbar-item company-logo"></p>
@@ -172,9 +172,10 @@
         </section>
     </main>
     <script>
+        var width = $(window).width();
         $(function() {
             $(window).resize(function() {
-                var width = $(window).width();
+                width = $(window).width();
                 if (width > 768) {
                     $('.navbar-menu').show();
                 } else {
@@ -184,15 +185,19 @@
         });
 
         function openModal() {
-            $('.navbar-menu').show();
-            $('.modal-close').show();
-            $('.modal-open').hide();
+            if (width <= 768) {
+                $('.navbar-menu').show();
+                $('.modal-close').show();
+                $('.modal-open').hide();
+            }
         }
 
         function closeModal() {
-            $('.navbar-menu').hide();
-            $('.modal-close').hide();
-            $('.modal-open').show();
+            if (width <= 768) {
+                $('.navbar-menu').hide();
+                $('.modal-close').hide();
+                $('.modal-open').show();
+            }
         }
     </script>
 </body>
