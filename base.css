@@ -259,7 +259,10 @@ table th {
     }
 }
 
-@media screen and (max-width: 320px) {
+@media screen and (max-width: 375px) {
+    .table {
+        width: 100%;
+    }
     .toggle-modal {
         top: -10px;
         right: -20px;
